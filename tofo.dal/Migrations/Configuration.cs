@@ -5,7 +5,7 @@ namespace todo.dal.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<todo.dal.TodoDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TodoDBContext>
     {
         public Configuration()
         {

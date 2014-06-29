@@ -9,6 +9,11 @@ namespace todo.dal
 {
 	public class TodoDBContext : DbContext
 	{
+		public TodoDBContext()
+			: base("name = todoConnection")
+		{
+
+		}
 		public DbSet<Todo> Todoes { get; set; }
 	}
 }

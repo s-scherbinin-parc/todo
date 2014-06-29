@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201406280940357_add_todo.cs" />
-    <Compile Include="Migrations\201406280940357_add_todo.Designer.cs">
-      <DependentUpon>201406280940357_add_todo.cs</DependentUpon>
+    <Compile Include="Migrations\201406281725424_add_todo.cs" />
+    <Compile Include="Migrations\201406281725424_add_todo.Designer.cs">
+      <DependentUpon>201406281725424_add_todo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201406280940357_add_todo.resx">
-      <DependentUpon>201406280940357_add_todo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201406281725424_add_todo.resx">
+      <DependentUpon>201406281725424_add_todo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
