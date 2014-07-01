@@ -11,18 +11,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo.dal", "tofo.dal\todo.d
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Any CPU = Azure|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Azure|Any CPU.Build.0 = Azure|Any CPU
 		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3794E04-3841-4570-A24D-031DF4ED16F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Azure|Any CPU.ActiveCfg = Release|Any CPU
+		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Azure|Any CPU.Build.0 = Release|Any CPU
 		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B91E047-D22A-4636-88C4-4C8D1797B5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D453BD0-A078-4AF0-8ADE-874CE7D3E26B}.Azure|Any CPU.ActiveCfg = Release|Any CPU
+		{0D453BD0-A078-4AF0-8ADE-874CE7D3E26B}.Azure|Any CPU.Build.0 = Release|Any CPU
 		{0D453BD0-A078-4AF0-8ADE-874CE7D3E26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D453BD0-A078-4AF0-8ADE-874CE7D3E26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D453BD0-A078-4AF0-8ADE-874CE7D3E26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
