@@ -1,8 +1,13 @@
 ﻿<div ng-app="todoApp" ng-controller="TodoCtrl">
+	<form>
+		<input type="text" ng-model="todo.Text">
+		<input type="checkbox" ng-model="todo.Done">
+		<button ng-click="add(todo)">Add</button>
+	</form>
 	<ul>
 		<li ng-repeat="todo in todoes">
 			{{todo.Text}}
-			<input type="checkbox" disabled ng-model="todo.Done" />
+			<input type="checkbox" ng-model="todo.Done" ng-change="update(todo)" />
 		</li>
 	</ul>
 </div>
