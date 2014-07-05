@@ -1,1 +1,10 @@
-﻿
+﻿.content{
+	width: 750px;
+	margin: 0 auto;
+}
+
+.todo{
+	background-color: aqua;
+	border: 1px solid;
+	border-radius: 5px;
+}

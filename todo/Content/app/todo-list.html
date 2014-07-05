@@ -4,7 +4,7 @@
 	<button ng-click="TodoListCtrl.add(TodoListCtrl.todo)">Add</button>
 </form>
 <ul>
-	<li ng-repeat="todo in TodoListCtrl.todoes">
+	<li class="todo" ng-repeat="todo in TodoListCtrl.todoes">
 		{{todo.Text}}
 		<input type="checkbox" ng-model="todo.Done" ng-change="TodoListCtrl.update(todo)" />
 	</li>
