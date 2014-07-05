@@ -1,29 +1,45 @@
-﻿var phonecatApp = angular.module('todoApp', ['ngResource']);
+﻿(function(){
+	var app = angular.module('todoApp', ['ngResource']);
 
-phonecatApp.factory('Todo', function ($resource) {
-	var resource = $resource('api/todoes',{},{
-		get:{
-			method:"GET",
-			isArray:true
-		},
-		push: {
-			method: "POST"
-		},
-		put: {
-			method: "PUT"
-		}
-	});
-	return resource;
-});
-
-phonecatApp.controller('TodoCtrl', function ($scope, Todo) {
-	$scope.todoes = Todo.get();
-	$scope.add = function (todo) {
-		Todo.push(todo, function (r) {
-			$scope.todoes.push(r);
+	app.factory('TodoResource', function ($resource) {
+		var resource = $resource('api/todoes', {}, {
+			get: {
+				method: "GET",
+				isArray: true
+			},
+			push: {
+				method: "POST"
+			},
+			put: {
+				method: "PUT"
+			}
 		});
-	}
-	$scope.update = function (todo) {
-		Todo.put(todo);
-	}
-});
+		return resource;
+	});
+
+	app.directive('todoList',['TodoResource', function (TodoResource) {
+		return	 {
+			restrict: 'E',
+			templateUrl: '/content/app/todo-list.html',
+			controller: function (TodoResource) {
+				this.todo = {};
+				this.todoes = [];
+				var ctrl = this;
+				TodoResource.get(function(data){
+					ctrl.todoes = data;
+				});
+
+				this.add = function (todo) {
+					TodoResource.push(todo, function (r) {
+						ctrl.todoes.push(r);
+					});
+				};
+
+				this.update = function (todo) {
+					TodoResource.put(todo);
+				};
+			},
+			controllerAs: 'TodoListCtrl'
+		}
+	}]);
+})();
