@@ -11,7 +11,7 @@
 	top: 50%;
 	left: 50%;
 	height: 47px;
-	width: 506px;
+	width: 500px;
 	margin: -23px 0 0 -253px;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .input{
-	width: 162px;
-	margin-right: 20px;
-	padding-left: 18px;
+	width: 159px; /*178 - 19*/ 
+	margin-right: 18px;
+	padding-left: 19px;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.12), inset 0 1px 0 0 #fff;
 }
 
@@ -39,7 +39,7 @@
 	padding-left: 0;
 	text-align: center;
 	color: #5d534d;
-	width: 100px;
+	width: 98px;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.12), inset 0 1px 0 0 #fff,inset 0 0 9.6px 0.4px rgba(0, 0, 0, 0.11);
 	margin-right: 0;
 }
