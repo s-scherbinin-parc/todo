@@ -1,4 +1,5 @@
-﻿(function(){
+﻿(function () {
+	'use strict';
 	var app = angular.module('todoApp', ['ngResource']);
 
 	app.factory('TodoResource', ['$resource', function ($resource) {
