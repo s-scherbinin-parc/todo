@@ -6,13 +6,15 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<title>Account</title>
+	@Scripts.Render("~/bundles/angularjs")
+	@Scripts.Render("~/Autentification/Scripts/js")
 	@Styles.Render("~/Autentification/Content/css")
 </head>
-<body>
-	<div class="container">
-		<input class="input" type="text" placeholder="Username" />
-		<input class="input" type="password" placeholder="Password" />
-		<a class="button" href="#">Submit</a>
-	</div>
+<body ng-app="accountApp">
+	<form class="container" ng-controller="AccountController as account" ng-submit="account.login(account.user)">
+		<input class="input" type="text" placeholder="Username" ng-model="account.user.username" />
+		<input class="input" type="password" placeholder="Password" ng-model="account.user.password" />
+		<button class="button">Submit</button>
+	</form>
 </body>
 </html>

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using todo.dal;
 using todo.dal.Autentification;
 
 namespace todo.Areas.Autentification.Infrastructure
@@ -19,7 +20,7 @@ namespace todo.Areas.Autentification.Infrastructure
 
 		public static AppUserManager Create(IdentityFactoryOptions<AppUserManager> options, IOwinContext context)
 		{
-			AppIdentityDbContext db = context.Get<AppIdentityDbContext>();
+			TodoDBContext db = context.Get<TodoDBContext>();
 			AppUserManager manager = new AppUserManager(new UserStore<AppUser>(db));
 			return manager;
 		}

@@ -2,6 +2,7 @@
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using todo.dal;
 using todo.dal.Autentification;
 
 namespace todo.Areas.Autentification.Infrastructure
@@ -10,7 +11,7 @@ namespace todo.Areas.Autentification.Infrastructure
 	{
 		public void Configuration(IAppBuilder app)
 		{
-			app.CreatePerOwinContext<AppIdentityDbContext>(AppIdentityDbContext.Create);
+			app.CreatePerOwinContext<TodoDBContext>(TodoDBContext.Create);
 			app.CreatePerOwinContext<AppUserManager>(AppUserManager.Create);
 			app.UseCookieAuthentication(new CookieAuthenticationOptions
 			{

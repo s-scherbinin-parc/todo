@@ -23,6 +23,9 @@ namespace todo.Areas.Autentification
 
 			BundleTable.Bundles.Add(new StyleBundle("~/Autentification/Content/css")
 				.Include("~/Areas/Autentification/Content/login.css"));
+
+			BundleTable.Bundles.Add(new ScriptBundle("~/Autentification/Scripts/js")
+				.Include("~/Areas/Autentification/Scripts/account.js"));
 		}
 	}
 }

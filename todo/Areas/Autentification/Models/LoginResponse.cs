@@ -6,12 +6,9 @@ using System.Web;
 
 namespace todo.Areas.Autentification.Models
 {
-	public class LoginViewModel
+	public class LoginResponse
 	{
 		[Required]
-		public string Username { get; set; }
-
-		[Required]
-		public string Password { get; set; }
+		public string ReturnUrl { get; set; }
 	}
 }

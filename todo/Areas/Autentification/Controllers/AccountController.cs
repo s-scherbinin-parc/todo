@@ -65,21 +65,19 @@ namespace todo.Areas.Autentification.Controllers
 
 		[HttpPost]
 		[AllowAnonymous]
-		[ValidateAntiForgeryToken]
+		//[ValidateAntiForgeryToken]
 		public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
 		{
 			if (ModelState.IsValid)
 			{
-				var user = await UserManager.FindAsync(model.Email, model.Password);
-				if (user != null)
+				var user = await UserManager.FindAsync(model.Username, model.Password);
+				if (user == null)
 				{
-					await SignInAsync(user, true);
-					return Redirect(returnUrl);
+					var identity = await UserManager.CreateAsync(new AppUser() { UserName = model.Username, Email = "kosmonavtsv@gmail.com" }, model.Password);
 				}
-				else
-				{
-					ModelState.AddModelError("", "Invalid username or password.");
-				}
+				user = await UserManager.FindAsync(model.Username, model.Password);
+				await SignInAsync(user, true);
+				return Json(new LoginResponse() { ReturnUrl = returnUrl });
 			}
 
 			return View(model);

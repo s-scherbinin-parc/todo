@@ -52,12 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autentification\ApiIdentityDbContext.cs" />
     <Compile Include="Autentification\AppUser.cs" />
     <Compile Include="Autentification\IdentityDbInit.cs" />
     <Compile Include="Migrations\201406281725424_add_todo.cs" />
     <Compile Include="Migrations\201406281725424_add_todo.Designer.cs">
       <DependentUpon>201406281725424_add_todo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407191743214_add foreignkey to user.cs" />
+    <Compile Include="Migrations\201407191743214_add foreignkey to user.Designer.cs">
+      <DependentUpon>201407191743214_add foreignkey to user.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +86,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201406281725424_add_todo.resx">
       <DependentUpon>201406281725424_add_todo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407191743214_add foreignkey to user.resx">
+      <DependentUpon>201407191743214_add foreignkey to user.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,7 @@ namespace todo
 
 			bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
 						"~/Scripts/angular.js",
+						"~/Scripts/angular-route.js",
 						"~/Scripts/angular-resource.js"));
 
 			bundles.Add(new ScriptBundle("~/bundles/jquery").Include(

@@ -2,15 +2,15 @@
 
 namespace todo.dal.Autentification
 {
-	public class IdentityDbInit : DropCreateDatabaseIfModelChanges<AppIdentityDbContext>
+	public class IdentityDbInit : DropCreateDatabaseIfModelChanges<TodoDBContext>
 	{
-		protected override void Seed(AppIdentityDbContext context)
+		protected override void Seed(TodoDBContext context)
 		{
 			PerformInitialSetup(context);
 			base.Seed(context);
 		}
 
-		private void PerformInitialSetup(AppIdentityDbContext context)
+		private void PerformInitialSetup(TodoDBContext context)
 		{
 		}
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
@@ -8,16 +9,28 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using todo.dal.Autentification;
 
 namespace todo.dal
 {
-	public class TodoDBContext : DbContext
+	public class TodoDBContext : IdentityDbContext<AppUser>
 	{
+		static TodoDBContext()
+		{
+			Database.SetInitializer<TodoDBContext>(new IdentityDbInit());
+		}
+
+		public static TodoDBContext Create()
+		{
+			return new TodoDBContext();
+		}
+
 		public TodoDBContext()
 			: base("name = todoConnection")
 		{
 
 		}
+
 		public DbSet<Todo> Todoes { get; set; }
 	}
 
