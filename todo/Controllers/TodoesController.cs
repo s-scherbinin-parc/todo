@@ -6,6 +6,7 @@ using todo.dal;
 
 namespace todo.Controllers
 {
+	[Authorize]
 	public class TodoesController : ApiController
 	{
 		TodoDBContext _context = new TodoDBContext();
